@@ -5,8 +5,8 @@ const mailchimp = require("@mailchimp/mailchimp_marketing");
 const { nextTick } = require('process');
 
 mailchimp.setConfig({
-  apiKey: "c8ba46fe04d5c769b9719de5b53abcfd-us2",
-  server: "us2"
+  apiKey: "",
+  server: ""
 });
 
 const app = express();
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res, next) => {
     try {
-        const listId = "202cf90f9e";
+        const listId = "";
         const subscribingUser = {
             firstName: req.body.fName,
             lastName: req.body.lName,
